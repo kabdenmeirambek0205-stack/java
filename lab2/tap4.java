@@ -10,7 +10,7 @@ public class tap4 {
         teacher.setupLab(myLab, "ОББ негіздері", 2);
         System.out.println("Тақырыбы: " + myLab.topic + ", Сағаты: " + myLab.duration);
     }
-}gi
+}
 
 class Lec {
     void setupLab(tap4 l, String t, int d) {
