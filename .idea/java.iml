@@ -3,7 +3,16 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/lab7" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/lab1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab6" isTestSource="false" />
+>>>>>>> origin/main
       <excludeFolder url="file://$MODULE_DIR$/lab1/new-Clock" />
     </content>
     <orderEntry type="inheritedJdk" />
