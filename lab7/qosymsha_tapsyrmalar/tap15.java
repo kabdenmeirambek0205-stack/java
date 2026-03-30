@@ -1,29 +1,23 @@
-public class tap15 {
-    public static void main(String[] args) {
+efine ATOMIC_COUNTER_ARRAY_STRIDE 4
 
-        int[] A = new int[10];
+// Attributes
+static float4 _radii_selector = {0, 0, 0, 0};
+static float4 _corner_and_radius_outsets = {0, 0, 0, 0};
+static float4 _aa_bloat_and_coverage = {0, 0, 0, 0};
+static float4 _radii_x = {0, 0, 0, 0};
+static float4 _radii_y = {0, 0, 0, 0};
+static float4 _skew = {0, 0, 0, 0};
+static float2 _translate_and_localrotate = {0, 0};
+static float4 _color = {0, 0, 0, 0};
 
-        // Массивті толтыру
-        for (int i = 0; i < 10; i++) {
-            A[i] = (int)(Math.random()*100);
-            System.out.print(A[i] + " ");
-        }
+static float4 gl_Position = float4(0, 0, 0, 0);
 
-        // Insertion Sort
-        for (int i = 1; i < A.length; i++) {
-            int key = A[i];
-            int j = i - 1;
+// Varyings
+static noperspective float4 _vcolor_S0 = {0, 0, 0, 0};
+static noperspective float2 _varccoord_S0 = {0, 0};
 
-            while (j >= 0 && A[j] > key) {
-                A[j + 1] = A[j];
-                j--;
-            }
-
-            A[j + 1] = key;
-        }
-
-        System.out.println("\nСұрыпталған массив:");
-        for (int x : A)
-            System.out.print(x + " ");
-    }
-}
+cbuffer DriverConstants : register(b1)
+{
+    float4 dx_ViewAdjust : packoffset(c1);
+    float2 dx_ViewCoords : packoffset(c2);
+    float2 dx_ViewS
